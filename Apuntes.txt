@@ -1,0 +1,5 @@
+* Utilidades
+- yarn add -D tailwindcss-3d
+- https://codepen.io/devdojo/pen/qBrEQqM
+- https://www.youtube.com/watch?v=DzvCcv4vCCk
+- https://www.youtube.com/watch?v=CPRDd2fb9go

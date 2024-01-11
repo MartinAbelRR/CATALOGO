@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input{
+        display: none;
+    }
+}
+
+@layer components {
+    .flip-book {
+        @apply relative w-[550px] h-[600px] perspective-[1500px];
+    }
+    .page {
+        @apply absolute bg-[#353755] h-[300px] w-[260px] rounded-[2px_20px_20px_2px] rotate-x-[10deg] z-[-1];
+    }
+}
+
+@layer utilities {
+    .bg-linear {
+        @apply  bg-[linear-gradient(90deg,#fff_50%,#4a1010_50%)]
+    }
+}
+
+#c1:checked ~ .flip-book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#c2:checked ~ .flip-book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+#c3:checked ~ .flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+#p1{
+	z-index: 3;
+}
+#p2{
+	z-index: 2;
+}
+#p3{
+	z-index: 1;
+}
+
+.page:nth-child(2){
+    transition-duration: 3s;
+}
+.page:nth-child(3){
+    transition-duration: 2.6s;
+}
+.page:nth-child(4){
+    transition-duration: 2.2s;
+}
+.page:nth-child(5){
+    transition-duration: 1.8s;
+}
+.page:nth-child(6){
+    transition-duration: 1.4s;
+}
