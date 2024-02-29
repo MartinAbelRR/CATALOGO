@@ -10,16 +10,16 @@
 
 @layer components {
     .flip-book {
-        @apply relative w-[550px] h-[600px] perspective-[1500px];
+        @apply h-[800px] w-[400px] perspective-[1500px] xl:w-[700px] xl:h-[800px];
     }
     .page {
-        @apply absolute bg-[#353755] h-[300px] w-[260px] rounded-[2px_20px_20px_2px] rotate-x-[10deg] z-[-1];
+        @apply  bg-[#353755] h-[300px] rotate-x-[10deg] rounded-[2px_20px_20px_2px] w-[260px] z-[-1];
     }
 }
 
 @layer utilities {
     .bg-linear {
-        @apply  bg-[linear-gradient(90deg,#fff_50%,#4a1010_50%)]
+        @apply  bg-white min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#F2490C_100%)];
     }
 }
 
@@ -38,28 +38,112 @@
     z-index: 3;
 }
 
+#c4:checked ~ .flip-book #p4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+#c5:checked ~ .flip-book #p5 {
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+
+#c6:checked ~ .flip-book #p6 {
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+
+#c7:checked ~ .flip-book #p7 {
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+
+#c8:checked ~ .flip-book #p8 {
+    transform: rotateY(-180deg);
+    z-index: 8;
+}
+ 
+#c9:checked ~ .flip-book #p9 {
+    transform: rotateY(-180deg);
+    z-index: 9;
+}
+
+#c10:checked ~ .flip-book #p10 {
+    transform: rotateY(-180deg);
+    z-index: 10;
+}
+
 #p1{
+	z-index: 10;
+}
+
+#p2{
+	z-index: 9;
+}
+
+#p3{
+	z-index: 8;
+}
+
+#p4{
+	z-index: 7;
+}
+
+#p5{
+	z-index: 6;
+}
+
+#p6{
+	z-index: 5;
+}
+
+#p7{
+	z-index: 4;
+}
+
+#p8{
 	z-index: 3;
 }
-#p2{
+
+#p9{
 	z-index: 2;
 }
-#p3{
+
+#p10{
 	z-index: 1;
 }
 
 .page:nth-child(2){
-    transition-duration: 3s;
+    transition-duration: 6s;
 }
 .page:nth-child(3){
-    transition-duration: 2.6s;
+    transition-duration: 5.4s;
 }
 .page:nth-child(4){
-    transition-duration: 2.2s;
+    transition-duration: 5s;
 }
 .page:nth-child(5){
-    transition-duration: 1.8s;
+    transition-duration: 4.4s;
 }
 .page:nth-child(6){
-    transition-duration: 1.4s;
+    transition-duration: 4.2s;
 }
+.page:nth-child(7){
+    transition-duration: 3.8s;
+}
+.page:nth-child(8){
+    transition-duration: 3.4s;
+}
+
+.page:nth-child(9){
+    transition-duration: 3s;
+}
+
+.page:nth-child(10){
+    transition-duration: 2.6s;
+}
+
+.page:nth-child(11){
+    transition-duration: 2.2s;
+}
+
